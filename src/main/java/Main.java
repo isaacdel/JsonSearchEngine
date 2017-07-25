@@ -6,7 +6,6 @@ import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.mongodb.*;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -65,13 +64,7 @@ class Main {
                 main.insertRecords(db);
             }
         } else if (file != null) {
-            if (file.equals(applicationConstants.USERS)) {
-                runSearch(db, applicationConstants.USERS);
-            } else if (file.equals(applicationConstants.TICKETS)) {
-                runSearch(db, applicationConstants.TICKETS);
-            } else if (file.equals(applicationConstants.ORGANIZATIONS)) {
-                runSearch(db, applicationConstants.ORGANIZATIONS);
-            }
+            runSearch(db, file);
         }
         mongo.close();
     }

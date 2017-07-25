@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 MongoDB V3.4 (run the "mongod" from the Mongodb /bin folder prior to next step)
 Maven
+Java 1.8
 
 
 ### Installing
@@ -31,9 +32,16 @@ From the root folder of the project (where the pom.xml file is):
                 In order to search for an empty value pass a space char (" ").
 
 
-
 ## Running the tests
 
 Run in cmd (root folder where the pom.xml file is) :
     mvn clean install
+
+## Expanding the search to new Json array files
+
+Add the file to the Resources/json folder
+Create a Model for it
+Add it to File Validation
+Add it to "insertRecords" method in Main class
+
 
