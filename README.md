@@ -43,5 +43,3 @@ Add the file to the Resources/json folder
 Create a Model for it
 Add it to File Validation
 Add it to "insertRecords" method in Main class
-
-
